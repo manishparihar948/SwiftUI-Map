@@ -23,7 +23,9 @@ import MapKit
  */
 
 // Make identifiable
-struct Location : Identifiable {
+// Equatable means : If we have two different locations in our code how does the compiler differentiate how can we sest one location equal to another location so the compiler gonna to wanna know are these two locations equal or they are not equal
+struct Location : Identifiable, Equatable {
+    
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
@@ -38,6 +40,11 @@ struct Location : Identifiable {
         // cityName = "Rome"
         // id = "ColoseumRome"
         name + cityName
+    }
+    
+    // Equatable
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        lhs.id == rhs.id // two of side have same id then we are on same locations
     }
 }
 

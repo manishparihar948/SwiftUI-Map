@@ -24,9 +24,12 @@ class LocationsViewModel: ObservableObject {
         }
     }
     
+    // Current region on map
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
-    
     let mapSpan =  MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    
+    // Show lists of locations
+    @Published var showLocationsList : Bool = false
     
     init() {
         // When we initialize we need to setup our location data service
@@ -46,4 +49,25 @@ class LocationsViewModel: ObservableObject {
                 span: mapSpan)
         }
     }
+    
+    func toggleLocationsLists() {
+        withAnimation(.easeInOut){
+            showLocationsList = !showLocationsList
+        }
+    }
+    
+    func showNextLocation(location: Location) {
+        withAnimation(.easeInOut){
+            mapLocation = location
+            showLocationsList = false
+        }
+    }
 }
+
+
+struct Previews_LocationsViewModel_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
+
