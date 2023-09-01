@@ -22,12 +22,22 @@ import MapKit
      link: "https://en.wikipedia.org/wiki/Colosseum")
  */
 
-struct Location {
+// Make identifiable
+struct Location : Identifiable {
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
     let description: String
     let imageNames: [String]
     let link: String
+    
+    // Identifiable
+    // We need to make id seperately because we have same city and we dont want two id be same.
+    var id:String {
+        // name = "Colosseum"
+        // cityName = "Rome"
+        // id = "ColoseumRome"
+        name + cityName
+    }
 }
 
