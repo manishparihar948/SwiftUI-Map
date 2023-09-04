@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0099202AA5B95300923A04 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00991F2AA5B95300923A04 /* LocationPreviewView.swift */; };
 		CDCB0F7D2AA1A5D200909A5F /* SwiftMapAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB0F7C2AA1A5D200909A5F /* SwiftMapAppApp.swift */; };
 		CDCB0F7F2AA1A5D200909A5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB0F7E2AA1A5D200909A5F /* ContentView.swift */; };
 		CDCB0F842AA1A5D700909A5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB0F832AA1A5D700909A5F /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD00991F2AA5B95300923A04 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		CDCB0F792AA1A5D200909A5F /* SwiftMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB0F7C2AA1A5D200909A5F /* SwiftMapAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMapAppApp.swift; sourceTree = "<group>"; };
 		CDCB0F7E2AA1A5D200909A5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				CDCB0F942AA1AAAD00909A5F /* LocationsView.swift */,
 				CDCB0F982AA1C7EC00909A5F /* LocationsListsView.swift */,
+				CD00991F2AA5B95300923A04 /* LocationPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				CDCB0F932AA1A97700909A5F /* LocationsDataService.swift in Sources */,
 				CDCB0F972AA1AD6D00909A5F /* LocationsViewModel.swift in Sources */,
+				CD0099202AA5B95300923A04 /* LocationPreviewView.swift in Sources */,
 				CDCB0F7F2AA1A5D200909A5F /* ContentView.swift in Sources */,
 				CDCB0F952AA1AAAD00909A5F /* LocationsView.swift in Sources */,
 				CDCB0F902AA1A8DA00909A5F /* Location.swift in Sources */,
