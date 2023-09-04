@@ -15,6 +15,7 @@ struct LocationsView: View {
     // We dont need this stateobject as we added environmetobjec in app first initialize
     // @StateObject private var vm = LocationssViewModel()
     @EnvironmentObject private var vm: LocationsViewModel
+    let maxWidthForIpad: CGFloat = 700
     
     /*
      @State private var mapRegion: MKCoordinateRegion = MKCoordinateRegion(
@@ -30,6 +31,7 @@ struct LocationsView: View {
             VStack(spacing: 0) {
                 header
                     .padding()
+                    .frame(maxWidth: maxWidthForIpad)
                 Spacer()
                 locationPreviewStack
             }
@@ -107,6 +109,8 @@ extension LocationsView {
                         .shadow(color: Color.black.opacity(0.3),
                                 radius: 20)
                         .padding()
+                        .frame(maxWidth: maxWidthForIpad)
+                        .frame(maxWidth: .infinity)
                         .transition(.asymmetric(
                             insertion: .move(edge: .trailing),
                             removal: .move(edge: .leading)))
